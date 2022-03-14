@@ -46,4 +46,5 @@ TryExec=${PREFIX}/bin/spyder
 Exec=${PREFIX}/bin/spyder %F
 EOF
 
-desktop-file-install --dir="${DESKTOP_FILE_DIRECTORY}" "${CONDA_SPYDER_DESKTOP}"
+# Don't fail if this command doesn't exist
+desktop-file-install --dir="${DESKTOP_FILE_DIRECTORY}" "${CONDA_SPYDER_DESKTOP}" || exit 0
