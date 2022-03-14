@@ -1,0 +1,36 @@
+{% set name = "spyder-desktop" %}
+{% set version = "0.0.1" %}
+
+package:
+  name: {{ name|lower }}
+  version: {{ version }}
+
+source:
+  path: .
+
+build:
+  number: 0
+  skip: true  # [not linux]
+
+requirements:
+  run:
+    - spyder
+
+test:
+  commands:
+    - echo No valuable test. Requires desktop interaction.
+
+about:
+  home: https://github.com/ramonaoptics/spyder-desktop-feedstock
+  summary: Desktop launchers for spyder when installed in linux
+  description: |
+    This will create a desktop launcher for Spyder. The launcher will override
+    other launchers.
+  license: BSD-3-Clause
+  license_family: BSD
+  license_file: LICENSE
+
+extra:
+  recipe-maintainers:
+    - hmaarrfk
+
