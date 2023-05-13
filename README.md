@@ -1,11 +1,11 @@
-About spyder-desktop
-====================
+About spyder-desktop-feedstock
+==============================
+
+Feedstock license: [BSD-3-Clause](https://github.com/ramonaoptics/spyder-desktop-feedstock/blob/main/LICENSE.txt)
 
 Home: https://github.com/ramonaoptics/spyder-desktop-feedstock
 
 Package license: BSD-3-Clause
-
-Feedstock license: [BSD-3-Clause](https://github.com/ramonaoptics/spyder-desktop-feedstock/blob/master/LICENSE.txt)
 
 Summary: Desktop launchers for spyder when installed in linux
 
@@ -24,8 +24,8 @@ Current build status
     <td>
       <details>
         <summary>
-          <a href="https://dev.azure.com/ramonaoptics/feedstock-builds/_build/latest?definitionId=&branchName=master">
-            <img src="https://dev.azure.com/ramonaoptics/feedstock-builds/_apis/build/status/spyder-desktop-feedstock?branchName=master">
+          <a href="https://dev.azure.com/ramonaoptics/feedstock-builds/_build/latest?definitionId=&branchName=main">
+            <img src="https://dev.azure.com/ramonaoptics/feedstock-builds/_apis/build/status/spyder-desktop-feedstock?branchName=main">
           </a>
         </summary>
         <table>
@@ -33,8 +33,8 @@ Current build status
           <tbody><tr>
               <td>linux_64</td>
               <td>
-                <a href="https://dev.azure.com/ramonaoptics/feedstock-builds/_build/latest?definitionId=&branchName=master">
-                  <img src="https://dev.azure.com/ramonaoptics/feedstock-builds/_apis/build/status/spyder-desktop-feedstock?branchName=master&jobName=linux&configuration=linux_64_" alt="variant">
+                <a href="https://dev.azure.com/ramonaoptics/feedstock-builds/_build/latest?definitionId=&branchName=main">
+                  <img src="https://dev.azure.com/ramonaoptics/feedstock-builds/_apis/build/status/spyder-desktop-feedstock?branchName=main&jobName=linux&configuration=linux%20linux_64_" alt="variant">
                 </a>
               </td>
             </tr>
@@ -62,16 +62,41 @@ conda config --add channels ramonaoptics
 conda config --set channel_priority strict
 ```
 
-Once the `ramonaoptics` channel has been enabled, `spyder-desktop` can be installed with:
+Once the `ramonaoptics` channel has been enabled, `spyder-desktop` can be installed with `conda`:
 
 ```
 conda install spyder-desktop
 ```
 
-It is possible to list all of the versions of `spyder-desktop` available on your platform with:
+or with `mamba`:
+
+```
+mamba install spyder-desktop
+```
+
+It is possible to list all of the versions of `spyder-desktop` available on your platform with `conda`:
 
 ```
 conda search spyder-desktop --channel ramonaoptics
+```
+
+or with `mamba`:
+
+```
+mamba search spyder-desktop --channel ramonaoptics
+```
+
+Alternatively, `mamba repoquery` may provide more information:
+
+```
+# Search all versions available on your platform:
+mamba repoquery search spyder-desktop --channel ramonaoptics
+
+# List packages depending on `spyder-desktop`:
+mamba repoquery whoneeds spyder-desktop --channel ramonaoptics
+
+# List dependencies of `spyder-desktop`:
+mamba repoquery depends spyder-desktop --channel ramonaoptics
 ```
 
 
