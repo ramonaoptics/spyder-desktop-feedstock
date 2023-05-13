@@ -1,3 +1,5 @@
+conda_build:
+  pkg_format: '2'
 github:
   user_or_org: ramonaoptics
 channels:
