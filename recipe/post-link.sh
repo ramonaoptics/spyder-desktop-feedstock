@@ -33,6 +33,7 @@ fi
 
 PREFIX="${PREFIX:-${CONDA_PREFIX}}"
 CONDA_SPYDER_DESKTOP="${PREFIX}/share/applications/spyder.desktop"
+CONDA_EXE="${CONDA_EXE:=$(which conda)}"
 
 XDG_DATA_HOME="${XDG_DATA_HOME:="$HOME/.local/share"}"
 DESKTOP_FILE_DIRECTORY="${XDG_DATA_HOME}/applications"
@@ -43,7 +44,7 @@ sed --in-place '/^Exec/d' "${CONDA_SPYDER_DESKTOP}"
 cat >>"${CONDA_SPYDER_DESKTOP}" <<EOF
 Icon=${PREFIX}/share/icons/spyder.png
 TryExec=${PREFIX}/bin/spyder
-Exec="${PREFIX}/bin/conda" run --prefix "${PREFIX}" "${PREFIX}/bin/spyder" %F
+Exec="${CONDA_EXE}" run --prefix "${PREFIX}" "${PREFIX}/bin/spyder" %F
 EOF
 
 # Don't fail if this command doesn't exist
