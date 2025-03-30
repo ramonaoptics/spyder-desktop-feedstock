@@ -1,5 +1,5 @@
 {% set name = "spyder-desktop" %}
-{% set version = "0.0.3" %}
+{% set version = "0.0.4" %}
 
 package:
   name: {{ name|lower }}
@@ -14,7 +14,7 @@ build:
 
 requirements:
   run:
-    - spyder
+    - spyder-base
 
 test:
   commands:
