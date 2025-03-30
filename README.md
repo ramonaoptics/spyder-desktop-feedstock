@@ -24,7 +24,7 @@ Current build status
     <td>
       <details>
         <summary>
-          <a href="https://dev.azure.com/ramonaoptics/feedstock-builds/_build/latest?definitionId=&branchName=main">
+          <a href="https://dev.azure.com/ramonaoptics/feedstock-builds/_build/latest?definitionId=None&branchName=main">
             <img src="https://dev.azure.com/ramonaoptics/feedstock-builds/_apis/build/status/spyder-desktop-feedstock?branchName=main">
           </a>
         </summary>
@@ -33,7 +33,7 @@ Current build status
           <tbody><tr>
               <td>linux_64</td>
               <td>
-                <a href="https://dev.azure.com/ramonaoptics/feedstock-builds/_build/latest?definitionId=&branchName=main">
+                <a href="https://dev.azure.com/ramonaoptics/feedstock-builds/_build/latest?definitionId=None&branchName=main">
                   <img src="https://dev.azure.com/ramonaoptics/feedstock-builds/_apis/build/status/spyder-desktop-feedstock?branchName=main&jobName=linux&configuration=linux%20linux_64_" alt="variant">
                 </a>
               </td>
